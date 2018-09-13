@@ -4,9 +4,11 @@
 */
 var regex1 = /\w+/;
 var regex2 = new RegExp('\\w+');
+var regex3 = RegExp('\\w+');
 
 console.log(regex1);
 console.log(regex2);
+console.log(regex3);
 console.log(regex1 == regex2);
 
 // match Jack only when follow by 'Forest'
