@@ -41,3 +41,14 @@ console.log(r);
 
 r = s.match(/yes[^]*day/);
 console.log(r);
+
+var text = 'first line\nsecond line';
+var regex = /(\S+) line\n?/y;
+
+var match = regex.exec(text);
+console.log(match[1]);
+console.log(regex.lastIndex);
+
+match = regex.exec(text);
+console.log(match[1]);
+console.log(regex.lastIndex);
