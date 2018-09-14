@@ -85,4 +85,36 @@ console.log(result);
  * against a regular expression
  * regexp[Symbol.match](str)
  * return array contain entire match result
+ * This method is called internally in String.prototype.match().
  */
+var re = /\d+/g;
+var str = '2016-01-02';
+var result = re[Symbol.match](str);
+console.log(result);
+
+var result2 = str.match(re);
+console.log(result2);
+
+/**
+ * The [@@replace]() method replaces some or all matches 
+ * of a this pattern in a string by a replacement, 
+ * and returns the result of the replacement as a new string. 
+ * The replacement can be a string or a function to be called for each match.
+ * 
+ * regexp[Symbol.replace](str, newSubStr|function)
+ */
+
+var re = /-/g;
+var str = '2018-09-14';
+var newstr = str.replace(re, '.');
+console.log(newstr);
+var newstrr = str.replace(re, function(s) {
+    return '$$' + s;
+});
+console.log(newstrr);
+var newstr2 = re[Symbol.replace](str, '.');
+console.log(newstr2);
+var newstr3 = re[Symbol.replace](str, function(s) {
+    return s + '!';
+});
+console.log(newstr3);
