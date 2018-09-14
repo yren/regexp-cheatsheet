@@ -79,3 +79,10 @@ console.log(matches);
 var str = 'hello world!';
 var result = /^hello/.test(str);
 console.log(result);
+
+/**
+ * [@@match]() , retrives the matches when a matching a string
+ * against a regular expression
+ * regexp[Symbol.match](str)
+ * return array contain entire match result
+ */
