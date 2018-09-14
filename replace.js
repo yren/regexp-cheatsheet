@@ -71,3 +71,11 @@ console.log(result);
 
 var matches = /(hello \S+)/.exec('This is hello world!');
 console.log(matches);
+
+/*
+    regexp.test(str)
+    执行一个检索，检查正则表达式与指定字符串是否匹配。true 或 false
+*/
+var str = 'hello world!';
+var result = /^hello/.test(str);
+console.log(result);
