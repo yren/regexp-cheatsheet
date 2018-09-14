@@ -68,3 +68,6 @@ while ((arr1 = reg.exec(str1)) !== null) {
 var re = /quick\s(brown).+?(jumps)/ig;
 var result = re.exec('The Quick Brown Fox Jumps Over The lazy dog');
 console.log(result);
+
+var matches = /(hello \S+)/.exec('This is hello world!');
+console.log(matches);
