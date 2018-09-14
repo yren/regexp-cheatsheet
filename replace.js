@@ -28,3 +28,16 @@ re = /(\w+)\s(\w+)/;
 str = "Jim Simth";
 newstr = str.replace(re, '$2 $1');
 console.log(newstr);
+
+// use regexp split lines into array
+var text = 'some text\nand more\r\nand yet\ryou know';
+var lines = text.split(/\r\n|\n|\r/);
+console.log(lines);
+
+// use regexp on multiple lines
+var s = 'please yes\nmake my day!';
+var r = s.match(/yes.*day/);
+console.log(r);
+
+r = s.match(/yes[^]*day/);
+console.log(r);
