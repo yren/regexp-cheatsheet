@@ -52,3 +52,15 @@ console.log(regex.lastIndex);
 match = regex.exec(text);
 console.log(match[1]);
 console.log(regex.lastIndex);
+
+/*
+reg.exec(str)
+在指定字符串执行一个搜索匹配
+*/
+var reg = /foo*/g;
+var str1 = 'table football, foosball';
+var arr1;
+while ((arr1 = reg.exec(str1)) !== null) {
+    console.log(arr1[0]);
+    console.log(reg.lastIndex);
+} 
